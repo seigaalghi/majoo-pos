@@ -1,0 +1,1402 @@
+{
+	"info": {
+		"_postman_id": "b0a538c1-9fbd-4a70-a15e-2fe979b40eca",
+		"name": "MAJOO SEIGA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "CREATE PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Sunsilk\",\r\n    \"sku\" : 213131,\r\n    \"image\" : \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Rexona\",\r\n    \"sku\" : 213131,\r\n    \"image\" : \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/product",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:24:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Created successfully\",\n    \"result\": {\n        \"ID\": 2,\n        \"CreatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n        \"UpdatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Rexona\",\n        \"sku\": 213131,\n        \"image\": \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\",\n        \"merchant_id\": 1,\n        \"merchant\": {\n            \"ID\": 1,\n            \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"UpdatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Seiga AL Ghifari\",\n            \"username\": \"seigaalghi\"\n        }\n    },\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UDATE PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Biores\",\r\n    \"sku\" : 63231,\r\n    \"image\" : \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Biores\",\r\n    \"sku\" : 63231,\r\n    \"image\" : \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/product/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:25:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "477"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated successfully\",\n    \"result\": {\n        \"ID\": 1,\n        \"CreatedAt\": \"2021-09-28T22:24:07.367+07:00\",\n        \"UpdatedAt\": \"2021-09-28T22:25:29.797+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Biores\",\n        \"sku\": 63231,\n        \"image\": \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\",\n        \"merchant_id\": 1,\n        \"merchant\": {\n            \"ID\": 1,\n            \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"UpdatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Seiga AL Ghifari\",\n            \"username\": \"seigaalghi\"\n        }\n    },\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELTE PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/product/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/product/4",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:30:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"record not found\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/product/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:30:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\",\n    \"result\": {},\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/product/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/product/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:31:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product retrieved successfully\",\n    \"result\": {\n        \"ID\": 2,\n        \"CreatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n        \"UpdatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Rexona\",\n        \"sku\": 213131,\n        \"image\": \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\",\n        \"merchant_id\": 1,\n        \"merchant\": {\n            \"ID\": 1,\n            \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"UpdatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Seiga AL Ghifari\",\n            \"username\": \"seigaalghi\"\n        }\n    },\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/product/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:31:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"record not found\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET PRODUCTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:5000/api/v1/product",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:31:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "491"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Products retrieved successfully\",\n    \"result\": [\n        {\n            \"ID\": 2,\n            \"CreatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n            \"UpdatedAt\": \"2021-09-28T22:24:58.822+07:00\",\n            \"DeletedAt\": null,\n            \"name\": \"Rexona\",\n            \"sku\": 213131,\n            \"image\": \"https://p.ipricegroup.com/uploaded_ff298ed4649fb60a3b6eba0a163e1c64.jpg\",\n            \"merchant_id\": 1,\n            \"merchant\": {\n                \"ID\": 1,\n                \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n                \"UpdatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n                \"DeletedAt\": null,\n                \"name\": \"Seiga AL Ghifari\",\n                \"username\": \"seigaalghi\"\n            }\n        }\n    ],\n    \"status\": \"success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"token\", pm.response.json().result.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:22:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged in successfully\",\n    \"result\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzI4NDYxNzYsInBheWxvYWQiOnsiaWQiOjEsInVzZXJuYW1lIjoic2VpZ2FhbGdoaSJ9fQ.p8C8Df5fKFF223BS_Tf4oBHzJdTxELIVvl0jG6DKATc\"\n    },\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd12343\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:23:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid username or password\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"seigaalghi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:23:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Key: 'Login.Password' Error:Field validation for 'Password' failed on the 'required' tag\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MERCHANT",
+			"item": [
+				{
+					"name": "ADD USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi3\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/merchant",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"merchant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:19:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Merchant created successfully\",\n    \"result\": {\n        \"ID\": 1,\n        \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n        \"UpdatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Seiga AL Ghifari\",\n        \"username\": \"seigaalghi\"\n    },\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:19:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"username already used\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:20:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Key: 'MerchantInput.Password' Error:Field validation for 'Password' failed on the 'required' tag\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/merchant/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi\",\r\n    \"password\" : \"abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:20:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"username already used\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"username\" : \"seigaalghi2\",\r\n    \"password\" : \"abcd12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:21:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Merchant updated successfully\",\n    \"result\": {\n        \"ID\": 2,\n        \"CreatedAt\": \"2021-09-28T22:20:33.152+07:00\",\n        \"UpdatedAt\": \"2021-09-28T22:21:04.31+07:00\",\n        \"DeletedAt\": null,\n        \"name\": \"Seiga AL Ghifari\",\n        \"username\": \"seigaalghi2\"\n    },\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Seiga AL Ghifari\",\r\n    \"password\" : \"abcd12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:21:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Key: 'MerchantInput.Username' Error:Field validation for 'Username' failed on the 'required' tag\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET MERCHANT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/merchant/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:21:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Merchant retrieved successfully\",\n    \"result\": {\n        \"ID\": 2,\n        \"CreatedAt\": \"2021-09-28T22:20:33.152+07:00\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DeletedAt\": null,\n        \"name\": \"Seiga AL Ghifari\",\n        \"username\": \"seigaalghi2\"\n    },\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:22:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"record not found\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE MERCHANT",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/merchant/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:22:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Merchant deleted successfully\",\n    \"result\": {},\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"2"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:22:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"record not found\",\n    \"result\": {},\n    \"status\": \"failed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET MERCHANTS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "{{apikey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/merchant",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"merchant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "apiKey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:5000/api/v1/merchant",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"v1",
+										"merchant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Sep 2021 15:22:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "387"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Merchants retrieved successfully\",\n    \"result\": [\n        {\n            \"ID\": 1,\n            \"CreatedAt\": \"2021-09-28T22:19:23.108+07:00\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"Seiga AL Ghifari\",\n            \"username\": \"seigaalghi\"\n        },\n        {\n            \"ID\": 2,\n            \"CreatedAt\": \"2021-09-28T22:20:33.152+07:00\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"Seiga AL Ghifari\",\n            \"username\": \"seigaalghi2\"\n        }\n    ],\n    \"status\": \"success\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "apikey",
+			"value": "apikeydemo"
+		}
+	]
+}
