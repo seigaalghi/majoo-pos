@@ -2,6 +2,7 @@
 
 ## How to run the project
 
+- Clone this project to your gopath folder `$GOPATH/github.com/seigaalghi/majoo-pos`
 - Create DB at your MYSQL DB.
 - Name the db as majoo or you can change the db name at .env file
 - Enter `go get` command at the terminal
