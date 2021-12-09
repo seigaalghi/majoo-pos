@@ -45,3 +45,5 @@ func main() {
 }
 
 // gin --appPort 5000 --all -i run main.go
+
+// Ini sudah diubah
