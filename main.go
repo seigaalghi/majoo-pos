@@ -37,7 +37,7 @@ func main() {
 	productV1 := serverV1.Group("/product")
 	productV1.Use(middlewares.AuthorizeJWT())
 	productV1.POST("/", controllers.CreateProduct)
-	productV1.GET("/:productName", controllers.GetProduct)
+	productV1.GET("/:id", controllers.GetProduct)
 	productV1.GET("/", controllers.GetProducts)
 	productV1.PUT("/:id", controllers.UpdateProduct)
 	productV1.DELETE("/:id", controllers.DeleteProduct)
